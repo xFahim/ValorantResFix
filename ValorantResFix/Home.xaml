@@ -1,0 +1,99 @@
+﻿<Page x:Class="ValorantResFix.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ValorantResFix"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="#FF151515"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+            <StackPanel Orientation="Horizontal" Margin="0 25 0 0" HorizontalAlignment="Center">
+                <StackPanel VerticalAlignment="Center">
+                    <materialDesign:PackIcon HorizontalAlignment="Center" Kind="FileCog" Width="40" Height="40"></materialDesign:PackIcon>
+                    <TextBlock Margin="5" Opacity="0.8" FontWeight="SemiBold" HorizontalAlignment="Center">Total Config File</TextBlock>
+                    <TextBlock Name="TotalFileTxt" FontSize="28" HorizontalAlignment="Center" FontWeight="Bold">00</TextBlock>
+                </StackPanel>
+                
+                
+                <Grid Margin="20 0 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="0" Grid.Column="0">Resolution Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="1" Grid.Column="0">View Distance Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="2" Grid.Column="0">Anti Aliasing Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="3" Grid.Column="0">Shadow Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="4" Grid.Column="0">Post Process Quality</TextBlock>
+
+                    <TextBox Name="ResqualityBox" Grid.Row="0" BorderThickness="2" BorderBrush="LightSkyBlue" Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="ViewDistanceQBox" Grid.Row="1" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="AntiAliasisBox" Grid.Row="2" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="ShadowQBox" Grid.Row="3" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="PostProcessBox" Grid.Row="4" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                </Grid>
+
+                <Grid Margin="20 0 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="0" Grid.Column="0">Texture Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="1" Grid.Column="0">Effects Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="2" Grid.Column="0">Foliage Quality</TextBlock>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" FontWeight="SemiBold" Opacity="0.8" Grid.Row="3" Grid.Column="0">Shading Quality</TextBlock>
+
+                    <TextBox Name="TextureQBox" Grid.Row="0" BorderThickness="2" BorderBrush="LightSkyBlue" Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="EffectQBox" Grid.Row="1" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="FoliageQBox" Grid.Row="2" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                    <TextBox Name="ShadingQBox" Grid.Row="3" BorderThickness="2" BorderBrush="LightSkyBlue"  Grid.Column="1" Width="90" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBox>
+                </Grid>
+            </StackPanel>
+
+
+            <StackPanel Margin="0 30 0 0" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Name="SaveBtn" Click="SaveBtn_Click" Width="140">Save Changes</Button>
+                <Button Name="ApplyLowBtn" Click="ApplyLowBtn_Click" Margin="10 0 0 0" Width="200">Apply Low Settings</Button>
+               
+            </StackPanel>
+
+            <Button Name="resDefBtn" Click="resDefBtn_Click" Background="Transparent" Margin="10" HorizontalAlignment="Center" BorderThickness="0">
+                <Hyperlink  Foreground="LightSkyBlue">Restore Default Settings</Hyperlink>
+            </Button>
+
+            <StackPanel Margin="5 10 5 5" Name="LoadGrid">
+                <TextBlock Name="LoadTxt" HorizontalAlignment="Center"  FontWeight="SemiBold">Loading Data, Please wait</TextBlock>
+                <ProgressBar Margin="5" IsIndeterminate="True" Width="280"></ProgressBar>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
